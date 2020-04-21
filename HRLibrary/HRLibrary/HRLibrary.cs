@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRLibrary
 {
-    public enum MedicineSaleWithRecipe
+    public enum MedicineWithRecipe
     {
         Yes,
         No
@@ -19,9 +19,9 @@ namespace HRLibrary
         public string Manufacturer { get; set; }
         public double Price { get; set; }
         public int Count { get; set; }
-        public MedicineSaleWithRecipe SaleWithRecipe { get; set; }
+        public MedicineWithRecipe SaleWithRecipe { get; set; }
 
-        public Medicine(string name, string articleNumber, string manufacturer, MedicineSaleWithRecipe saleWithRecipe)
+        public Medicine(string name, string articleNumber, string manufacturer, MedicineWithRecipe saleWithRecipe)
         {
             Name = name;
             ArticleNumber = articleNumber;
@@ -42,10 +42,10 @@ namespace HRLibrary
 
             switch (SaleWithRecipe)
             {
-                case MedicineSaleWithRecipe.Yes:
+                case MedicineWithRecipe.Yes:
                     saleWithRecipe = "Да";
                     break;
-                case MedicineSaleWithRecipe.No:
+                case MedicineWithRecipe.No:
                     saleWithRecipe = "Нет";
                     break;
             }
